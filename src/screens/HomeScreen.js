@@ -113,7 +113,6 @@ const HomeScreen = () => {
       Math.abs(site.lng - region.longitude) < 0.0005) {
       return site;
     }
-
   })
 
   useEffect(() => {
