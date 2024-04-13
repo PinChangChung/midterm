@@ -161,7 +161,7 @@ const HomeScreen = () => {
                             <Marker
                               coordinate={marker.coord}
                             >
-                              <Icon name={"map-marker"} size={60} color="#B12A5B" />
+                              <Icon name={"map-marker"} size={60} color="#B12A5B"/>
                             </Marker>
                             {(zoomRatio > 0.14) && screenSites.map((site) => (
                               <Marker
