@@ -143,7 +143,7 @@ const HomeScreen = () => {
                   <VStack mt={20}>
                     <HStack mb={10} mt={-20} h={90} justifyContent="center" alignItems="center">
                       <Text paddingHorizontal={15} fontSize={18} color={textMode}>
-                        離您最近的站點：<Text fontWeight="bold" fontSize={20} color={textMode}>{nearpot.map((site) => {
+                        離您最近的站點：<Text fontWeight="bold" fontSize={20} color={textMode}>{nearpot == [] ? "附近無站點" : nearpot.map((site) => {
                           return site.sna
                         })}</Text>
                       </Text>
@@ -160,7 +160,7 @@ const HomeScreen = () => {
                             <Marker
                               coordinate={marker.coord}
                             >
-                              <Icon name={"map-marker"} size={60} color="#B12A5B"/>
+                              <Icon name={"map-marker"} size={60} color="#B12A5B" />
                             </Marker>
                             {(zoomRatio > 0.14) && screenSites.map((site) => (
                               <Marker
